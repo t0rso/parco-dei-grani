@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Ristorante Moderno</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header con Navbar -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Parco dei <span>Grani</span></a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">Chi Siamo</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contatti.html" class="active">Contatti</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="gallery-main">
+        <div class="container">
+            <h1 class="gallery-title">La Nostra Gallery</h1>
+            <p class="gallery-subtitle">Scopri l'atmosfera del nostro ristorante</p>
+            
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Tutto</button>
+                <button class="filter-btn" data-filter="interni">Interni</button>
+                <button class="filter-btn" data-filter="piatti">Piatti</button>
+                <button class="filter-btn" data-filter="eventi">Eventi</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item" data-category="interni">
+                    <img src="immagini/gallery/interni-1.jpg" alt="Interno del ristorante">
+                    <div class="gallery-overlay">
+                        <h3>La nostra sala</h3>
+                        <p>Atmosfera elegante e accogliente</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="interni">
+                    <img src="immagini/gallery/interni-2.jpg" alt="Interno del ristorante">
+                    <div class="gallery-overlay">
+                        <h3>La nostra sala</h3>
+                        <p>Atmosfera elegante e accogliente</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item" data-category="piatti">
+                    <img src="immagini/gallery/piatto-1.jpg" alt="Piatto del giorno">
+                    <div class="gallery-overlay">
+                        <h3>Pizza Margherita</h3>
+                        <p>Specialità della casa</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="piatti">
+                    <img src="immagini/gallery/piatto-2.jpg" alt="Piatto del giorno">
+                    <div class="gallery-overlay">
+                        <h3>Spaghetti allo Scoglio</h3>
+                        <p>Specialità della casa</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item" data-category="eventi">
+                    <img src="immagini/gallery/evento-1.jpg" alt="Evento speciale">
+                    <div class="gallery-overlay">
+                        <h3>Serata di degustazione</h3>
+                        <p>Eventi mensili con lo chef</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="eventi">
+                    <img src="immagini/gallery/evento-2.jpg" alt="Evento speciale">
+                    <div class="gallery-overlay">
+                        <h3>Cene per Matrimoni</h3>
+                        <p>Eventi mensili con lo chef</p>
+                    </div>
+                </div>
+                
+                <!-- Aggiungi altri 9-15 elementi seguendo lo stesso schema -->
+                <!-- ... -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Parco dei grani</h3>
+                    <p>Via Giovanni Lanza, 9, 47923 Rimini RN</p>
+                    <p>P.IVA: 12345678901</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Orari</h3>
+                    <p>Lun-Ven: 12:00 - 15:00 / 19:00 - 23:00</p>
+                    <p>Sab-Dom: 12:00 - 23:00</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <p><i class="fas fa-phone"></i> +39 327 340 8663</p>
+                    <p><i class="fas fa-envelope"></i> parcodeigrani@gmail.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Seguici</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RistoRante. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/gallery.js"></script>
+</body>
+</html>

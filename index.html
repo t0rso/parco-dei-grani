@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | RistoRante</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header con Navbar -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Parco dei <span>Grani</span></a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">Chi Siamo</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contatti.html" class="active">Contatti</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Un'oasi di gusto nel cuore di Rimini.</h1>
+                <p>Il posto giusto dove rilassarsi mangiando qualcosa di buono</p>
+                <a href="menu.html" class="btn">Scopri il Menu</a>
+                <a href="contatti.html" class="btn btn-outline">Prenota un Tavolo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+<!-- Menu Preview Section -->
+    <section class="menu-preview" id="menu">
+        <div class="container">
+            <h2 class="section-title">Le Nostre Specialità</h2>
+            
+            <div class="highlight-cards" id="highlightCards">
+                <!-- Le card verranno caricate qui automaticamente -->
+            </div>
+            
+            <div class="text-center">
+                <a href="menu.html" class="btn btn-primary">Scopri il Menu Completo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chi Siamo Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Chi Siamo</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur numquam non omnis! Ut nisi soluta adipisci at quas neque repellendus? Hic cupiditate animi, inventore libero nisi dignissimos veritatis repellendus quod!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ut sint distinctio incidunt animi laborum?</p>
+                    <a href="about.html" class="btn btn-primary">Chi siamo</a>
+                </div>
+                <div class="about-image">
+                    <img src="immagini/home/about.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Parco dei grani</h3>
+                    <p>Via Giovanni Lanza, 9, 47923 Rimini RN</p>
+                    <p>P.IVA: 12345678901</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Orari</h3>
+                    <p>Lun-Ven: 12:00 - 15:00 / 19:00 - 23:00</p>
+                    <p>Sab-Dom: 12:00 - 23:00</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contatti</h3>
+                    <p><i class="fas fa-phone"></i> +39 327 340 8663</p>
+                    <p><i class="fas fa-envelope"></i> parcodeigrani@gmail.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Seguici</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 RistoRante. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data/menu-data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
