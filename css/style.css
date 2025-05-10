@@ -566,6 +566,7 @@ body {
     display: flex;
     margin-left: 20px;
     align-items: center;
+    flex-direction: column;
 }
 
 .language-switcher button {
