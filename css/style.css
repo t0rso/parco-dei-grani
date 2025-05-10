@@ -7,12 +7,12 @@
 }
 
 :root {
-    --primary-color: #e63946;
-    --secondary-color: #1d3557;
-    --light-color: #f1faee;
-    --dark-color: #212529;
-    --gray-color: #495057;
-    --white-color: #ffffff;
+    --primary-color: #776857;
+    --secondary-color: #768257;
+    --light-color: #c2c7bd;
+    --dark-color: #544c36;
+    --gray-color: #b1a39c;
+    --white-color: #ede5d7;
 }
 
 html {
@@ -557,4 +557,50 @@ body {
     .highlight-cards {
         grid-template-columns: 1fr;
     }
+}
+
+/* Aggiungi queste regole alla fine del file */
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.language-switcher button {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 0 2px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.language-switcher button:hover {
+    background-color: rgba(230, 57, 70, 0.1);
+}
+
+.language-switcher button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Ottimizzazioni SEO per immagini */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Accessibilità */
+[aria-hidden="true"] {
+    display: none;
 }

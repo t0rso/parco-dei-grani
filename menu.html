@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu | RistoRante</title>
+    <title data-translate="menuPageTitle">Menu | Parco dei Grani - Ristorante Rimini</title>
+    <meta name="description" content="Menu del ristorante Parco dei Grani. Scopri le nostre specialità e piatti tradizionali.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,16 +13,20 @@
     <!-- Header con Navbar -->
     <header class="header">
         <div class="container">
-            <a href="index.html" class="logo">Parco dei <span>Grani</span></a>
+            <a href="index.html" class="logo" data-translate="siteTitle">Parco dei <span>Grani</span></a>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="about.html">Chi Siamo</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contatti.html" class="active">Contatti</a></li>
+                    <li><a href="index.html" data-translate="home">Home</a></li>
+                    <li><a href="menu.html" class="active" data-translate="menu">Menu</a></li>
+                    <li><a href="about.html" data-translate="about">Chi Siamo</a></li>
+                    <li><a href="gallery.html" data-translate="gallery">Gallery</a></li>
+                    <li><a href="contatti.html" data-translate="contact">Contatti</a></li>
                 </ul>
             </nav>
+            <div class="language-switcher">
+                <button onclick="changeLanguage('it')">IT</button>
+                <button onclick="changeLanguage('en')">EN</button>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -33,8 +38,8 @@
     <!-- Hero Section -->
     <section class="menu-hero">
         <div class="container">
-            <h1>Il Nostro Menu</h1>
-            <p>Scopri la nostra offerta culinaria</p>
+            <h1 data-translate="menuTitle">Il Nostro Menu</h1>
+            <p data-translate="menuSubtitle"></p>
         </div>
     </section>
 
@@ -49,7 +54,7 @@
                 <!-- Il contenuto del menu verrà caricato qui -->
             </div>
             <div class="text-center">
-                <a href="contatti.html" class="btn btn-primary">Chiamaci</a>
+                <a href="contatti.html" class="btn btn-primary" data-translate="callUs">Chiamaci</a>
             </div>
         </div>
     </section>
@@ -59,37 +64,40 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h3>Parco dei grani</h3>
+                    <h3 data-translate="footerTitle">Parco dei Grani</h3>
                     <p>Via Giovanni Lanza, 9, 47923 Rimini RN</p>
                     <p>P.IVA: 12345678901</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Orari</h3>
-                    <p>Lun-Ven: 12:00 - 15:00 / 19:00 - 23:00</p>
-                    <p>Sab-Dom: 12:00 - 23:00</p>
+                    <h3 data-translate="openingHours">Orari</h3>
+                    <p data-translate="weekHours">Lun-Ven: 12:00 - 15:00 / 19:00 - 23:00</p>
+                    <p data-translate="weekendHours">Sab-Dom: 12:00 - 23:00</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Contatti</h3>
+                    <h3 data-translate="contacts">Contatti</h3>
                     <p><i class="fas fa-phone"></i> +39 327 340 8663</p>
                     <p><i class="fas fa-envelope"></i> parcodeigrani@gmail.com</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Seguici</h3>
+                    <h3 data-translate="followUs">Seguici</h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 RistoRante. Tutti i diritti riservati.</p>
+                <p>&copy; <span id="currentYear"></span> <span data-translate="copyright">Parco dei Grani. Tutti i diritti riservati.</span></p>
             </div>
         </div>
     </footer>
 
-    <!-- File JS -->
     <script src="data/menu-data.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

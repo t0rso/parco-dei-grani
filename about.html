@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi Siamo | Ristorante Moderno</title>
+    <title data-translate="aboutPageTitle">Chi Siamo | Parco dei Grani - Ristorante Rimini</title>
+    <meta name="description" content="Scopri la storia e la filosofia del ristorante Parco dei Grani a Rimini. Tradizione e qualità dal 1980.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -12,16 +13,20 @@
     <!-- Header con Navbar -->
     <header class="header">
         <div class="container">
-            <a href="index.html" class="logo">Parco dei <span>Grani</span></a>
+            <a href="index.html" class="logo" data-translate="siteTitle">Parco dei <span>Grani</span></a>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="about.html">Chi Siamo</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contatti.html" class="active">Contatti</a></li>
+                    <li><a href="index.html" data-translate="home">Home</a></li>
+                    <li><a href="menu.html" data-translate="menu">Menu</a></li>
+                    <li><a href="about.html" class="active" data-translate="about">Chi Siamo</a></li>
+                    <li><a href="gallery.html" data-translate="gallery">Gallery</a></li>
+                    <li><a href="contatti.html" data-translate="contact">Contatti</a></li>
                 </ul>
             </nav>
+            <div class="language-switcher">
+                <button onclick="changeLanguage('it')">IT</button>
+                <button onclick="changeLanguage('en')">EN</button>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -33,33 +38,31 @@
     <!-- Hero Section -->
     <section class="about-hero">
         <div class="container">
-            <h1>La Nostra Storia</h1>
-            <p>Traditione e innovazione dal XXXX</p>
+            <h1 data-translate="aboutHeroTitle">La Nostra Storia</h1>
+            <p data-translate="aboutHeroSubtitle">Tradizione e innovazione dal 1980</p>
         </div>
     </section>
 
-    <!-- About Section - Versione pulita -->
+    <!-- About Section -->
     <section class="about-section">
         <div class="container">
             <div class="about-content-wrapper">
-                <!-- Colonna di testo (sinistra) -->
                 <div class="about-text">
-                    <h2 class="section-title">La nostra filosofia</h2>
+                    <h2 class="section-title" data-translate="philosophyTitle">La nostra filosofia</h2>
                     <div class="about-description">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur doloremque incidunt ducimus error quos sint at expedita, magnam quam qui?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi non, ipsam provident earum, dignissimos cum neque temporibus impedit quaerat, velit ratione laudantium totam enim doloribus ad aut. Exercitationem, atque suscipit.</p>
+                        <p data-translate="philosophyText1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur doloremque incidunt ducimus error quos sint at expedita, magnam quam qui?</p>
+                        <p data-translate="philosophyText2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi non, ipsam provident earum, dignissimos cum neque temporibus impedit quaerat, velit ratione laudantium totam enim doloribus ad aut. Exercitationem, atque suscipit.</p>
                         <ul class="about-features">
-                            <li><i class="fas fa-check-circle"></i> Ingredienti locali selezionati</li>
-                            <li><i class="fas fa-check-circle"></i> Tecniche tradizionali rivisitate</li>
-                            <li><i class="fas fa-check-circle"></i> Passione in ogni dettaglio</li>
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="feature1">Ingredienti locali selezionati</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="feature2">Tecniche tradizionali rivisitate</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span data-translate="feature3">Passione in ogni dettaglio</span></li>
                         </ul>
                     </div>
-                    <a href="gallery.html" class="btn btn-primary">Visita la nostra gallery</a>
+                    <a href="gallery.html" class="btn btn-primary" data-translate="visitGallery">Visita la nostra gallery</a>
                 </div>
 
-                <!-- Colonna immagine (destra) -->
                 <div class="about-image">
-                    <img src="immagini/about/image_1.jpg" alt="Interno del ristorante">
+                    <img src="immagini/about/image-1.jpeg" alt="Chef del ristorante Parco dei Grani" loading="lazy">
                 </div>
             </div>
         </div>
@@ -70,35 +73,39 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <h3>Parco dei grani</h3>
+                    <h3 data-translate="footerTitle">Parco dei Grani</h3>
                     <p>Via Giovanni Lanza, 9, 47923 Rimini RN</p>
                     <p>P.IVA: 12345678901</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Orari</h3>
-                    <p>Lun-Ven: 12:00 - 15:00 / 19:00 - 23:00</p>
-                    <p>Sab-Dom: 12:00 - 23:00</p>
+                    <h3 data-translate="openingHours">Orari</h3>
+                    <p data-translate="weekHours">Lun-Ven: 12:00 - 15:00 / 19:00 - 23:00</p>
+                    <p data-translate="weekendHours">Sab-Dom: 12:00 - 23:00</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Contatti</h3>
+                    <h3 data-translate="contacts">Contatti</h3>
                     <p><i class="fas fa-phone"></i> +39 327 340 8663</p>
                     <p><i class="fas fa-envelope"></i> parcodeigrani@gmail.com</p>
                 </div>
                 <div class="footer-col">
-                    <h3>Seguici</h3>
+                    <h3 data-translate="followUs">Seguici</h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 RistoRante. Tutti i diritti riservati.</p>
+                <p>&copy; <span id="currentYear"></span> <span data-translate="copyright">Parco dei Grani. Tutti i diritti riservati.</span></p>
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

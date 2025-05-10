@@ -88,7 +88,7 @@ function loadHighlightDishes() {
     const container = document.getElementById('highlightCards');
     
     // Seleziona la categoria da cui prendere i piatti (es. antipasti)
-    const category = menuData.categories.find(cat => cat.id === 'antipasti');
+    const category = menuData.categories.find(cat => cat.id === 'specialità');
     
     if (!category || !category.items) return;
     
