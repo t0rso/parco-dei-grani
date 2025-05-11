@@ -1,5 +1,21 @@
 // js/menu.js
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.querySelector('.navbar');
+
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navbar.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.navbar ul li a').forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navbar.classList.remove('active');
+        });
+    });
     // Carica la lingua corrente
     const currentLang = localStorage.getItem('language') || 'it';
     
