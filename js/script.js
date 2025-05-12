@@ -86,9 +86,13 @@ document.addEventListener('DOMContentLoaded', function() {
 // Carica le card dei piatti in evidenza
 function loadHighlightDishes() {
     const container = document.getElementById('highlightCards');
+    if (!container) return;
     
-    // Seleziona la categoria da cui prendere i piatti (es. antipasti)
-    const category = menuData.categories.find(cat => cat.id === 'specialità');
+    // Ottieni la lingua corrente
+    const currentLang = localStorage.getItem('language') || 'it';
+    
+    // Seleziona la categoria da cui prendere i piatti (es. 'specialità')
+    const category = menuData.categories.find(cat => cat.id === 'cassoni');
     
     if (!category || !category.items) return;
     
@@ -99,16 +103,27 @@ function loadHighlightDishes() {
     highlights.forEach(dish => {
         const card = document.createElement('div');
         card.className = 'highlight-card';
+        
+        // Gestione nome e descrizione in base alla lingua
+        const dishName = currentLang === 'it' ? dish.name_ita : dish.name_eng;
+        const dishDesc = currentLang === 'it' ? dish.description_ita : dish.description_eng;
+        const dishPrice = `€${dish.price.toFixed(2)}`;
+        
+        // Gestione immagine con fallback
+        const imageUrl = dish.image ? `immagini/menu/${dish.image}` : 'immagini/placeholder-dish.jpg';
+        const imageAlt = dishName; // Usa il nome del piatto come alt text
+        
         card.innerHTML = `
             <div class="highlight-card-img">
-                <img src="${dish.image}" alt="${dish.name}" onerror="this.src='images/placeholder-dish.jpg'">
+                <img src="${imageUrl}" alt="${imageAlt}" loading="lazy"
+                     onerror="this.src='immagini/placeholder-dish.jpg'; this.closest('.highlight-card').classList.add('no-image')">
             </div>
             <div class="highlight-card-content">
                 <h3 class="highlight-card-title">
-                    ${dish.name}
-                    <span class="highlight-card-price">${dish.price}</span>
+                    ${dishName}
+                    <span class="highlight-card-price">${dishPrice}</span>
                 </h3>
-                <p class="highlight-card-desc">${dish.description}</p>
+                <p class="highlight-card-desc">${dishDesc}</p>
             </div>
         `;
         container.appendChild(card);
