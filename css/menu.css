@@ -87,7 +87,7 @@
     min-height: auto;
 }
 .menu-item.no-image {
-    padding-top: 25px;
+    padding-top: px;
 }
 
 .menu-item:hover {
@@ -140,7 +140,7 @@
 
 .menu-item-desc {
     color: var(--gray-color);
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     line-height: 1.6;
     flex-grow: 1;
 }

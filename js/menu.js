@@ -1,6 +1,5 @@
 // js/menu.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
     const hamburger = document.getElementById('hamburger');
     const navbar = document.querySelector('.navbar');
 

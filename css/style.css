@@ -46,7 +46,8 @@ body {
 }
 
 .btn:hover {
-    background-color: #c1121f;
+    background-color: var(--white-color);
+    color: var(--primary-color);
     transform: translateY(-2px);
 }
 
@@ -547,9 +548,9 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #c1121f;
+    background-color: var(--white-color);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3);
+    box-shadow: 0 10px 20px var(--gray-color);
 }
 
 
