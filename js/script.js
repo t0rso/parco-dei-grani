@@ -1,4 +1,11 @@
+const featuredDishesConfig = [
+    { id: "salsiccia-cipolla", category: "specialità" },       // Esempio 1
+    { id: "coppa-pomodoro", category: "specialità" },       // Esempio 2
+    { id: "porchetta", category: "specialità" }          // Esempio 3
+];
+
 document.addEventListener('DOMContentLoaded', function() {
+    loadFeaturedDishes();
     // Mobile menu toggle
     const hamburger = document.getElementById('hamburger');
     const navbar = document.querySelector('.navbar');
@@ -84,48 +91,54 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 // Carica le card dei piatti in evidenza
-function loadHighlightDishes() {
+function loadFeaturedDishes() {
     const container = document.getElementById('highlightCards');
     if (!container) return;
     
-    // Ottieni la lingua corrente
+    container.innerHTML = ''; // Pulisci il contenitore
+    
     const currentLang = localStorage.getItem('language') || 'it';
     
-    // Seleziona la categoria da cui prendere i piatti (es. 'specialità')
-    const category = menuData.categories.find(cat => cat.id === 'cassoni');
-    
-    if (!category || !category.items) return;
-    
-    // Prendi i primi 3 piatti della categoria
-    const highlights = category.items.slice(0, 3);
-    
-    // Genera le card
-    highlights.forEach(dish => {
+    featuredDishesConfig.forEach(config => {
+        // Trova la categoria
+        const category = menuData.categories.find(cat => cat.id === config.category);
+        if (!category) return;
+        
+        // Trova il piatto specifico
+        const dish = category.items.find(item => item.id === config.id);
+        if (!dish) return;
+        
+        // Crea la card
         const card = document.createElement('div');
         card.className = 'highlight-card';
         
-        // Gestione nome e descrizione in base alla lingua
-        const dishName = currentLang === 'it' ? dish.name_ita : dish.name_eng;
-        const dishDesc = currentLang === 'it' ? dish.description_ita : dish.description_eng;
-        const dishPrice = `€${dish.price.toFixed(2)}`;
+        // Gestione nome e descrizione
+        const name = currentLang === 'it' ? dish.name_ita : dish.name_eng;
+        const desc = currentLang === 'it' ? dish.description_ita : dish.description_eng;
+        const price = `€${dish.price.toFixed(2)}`;
         
-        // Gestione immagine con fallback
-        const imageUrl = dish.image ? `immagini/menu/${dish.image}` : 'immagini/placeholder-dish.jpg';
-        const imageAlt = dishName; // Usa il nome del piatto come alt text
+        // Gestione immagine (con fallback elegante)
+        let imageHtml = '';
+        if (dish.image) {
+            imageHtml = `
+                <div class="highlight-card-img">
+                    <img src="immagini/menu/${dish.image}" 
+                         alt="${name}"
+                         loading="lazy"
+                         onerror="this.style.display='none'">
+                </div>
+            `;
+        }
         
         card.innerHTML = `
-            <div class="highlight-card-img">
-                <img src="${imageUrl}" alt="${imageAlt}" loading="lazy"
-                     onerror="this.src='immagini/placeholder-dish.jpg'; this.closest('.highlight-card').classList.add('no-image')">
-            </div>
+            ${imageHtml}
             <div class="highlight-card-content">
-                <h3 class="highlight-card-title">
-                    ${dishName}
-                    <span class="highlight-card-price">${dishPrice}</span>
-                </h3>
-                <p class="highlight-card-desc">${dishDesc}</p>
+                <h3>${name}</h3>
+                <p class="highlight-card-desc">${desc}</p>
+                <span class="highlight-card-price">${price}</span>
             </div>
         `;
+        
         container.appendChild(card);
     });
 }

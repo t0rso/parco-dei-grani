@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         updateMetaTags();
         setActiveLanguageButton();
         updateImageAlts();
+        loadFeaturedDishes();
         
         // Aggiorna il menu se siamo nella pagina del menu
         if (typeof updateMenuLanguage === 'function') {
