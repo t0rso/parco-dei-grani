@@ -5,34 +5,22 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Carica la lingua salvata o imposta l'italiano come default
     let currentLang = localStorage.getItem('language') || 'it';
-    let translations = {};
     document.documentElement.lang = currentLang;
     
-    // Funzione principale per cambiare lingua
-    window.changeLanguage = async function(lang) {
+    // Funzione per cambiare lingua
+    window.changeLanguage = function(lang) {
         currentLang = lang;
         localStorage.setItem('language', lang);
         document.documentElement.lang = lang;
+        loadTranslations();
+        updateMetaTags();
+        setActiveLanguageButton();
+        updateImageAlts();
+        loadFeaturedDishes();
         
-        try {
-            // Carica le traduzioni prima di aggiornare il contenuto
-            await loadTranslations();
-            
-            // Aggiorna tutti gli elementi della pagina
-            updatePageContent();
-            updateMetaTags();
-            setActiveLanguageButton();
-            updateImageAlts();
-            
-            // Aggiorna i componenti specifici
-            if (typeof loadFeaturedDishes === 'function') {
-                loadFeaturedDishes();
-            }
-            if (typeof updateMenuLanguage === 'function') {
-                updateMenuLanguage(currentLang); // Passa la lingua corrente
-            }
-        } catch (error) {
-            console.error('Error changing language:', error);
+        // Aggiorna il menu se siamo nella pagina del menu
+        if (typeof updateMenuLanguage === 'function') {
+            updateMenuLanguage();
         }
     };
     
@@ -40,37 +28,33 @@ document.addEventListener('DOMContentLoaded', function() {
     async function loadTranslations() {
         try {
             const response = await fetch(`lang/${currentLang}.json`);
-            translations = await response.json();
-            return translations;
+            const translations = await response.json();
+            
+            elementsToTranslate.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[key]) {
+                    if (element.tagName === 'INPUT' && (element.type === 'submit' || element.type === 'button')) {
+                        element.value = translations[key];
+                    } else if (element.tagName === 'IMG' && element.alt) {
+                        element.alt = translations[key];
+                    } else if (element.hasAttribute('title')) {
+                        element.title = translations[key];
+                    } else if (element.hasAttribute('placeholder')) {
+                        element.placeholder = translations[key];
+                    } else {
+                        element.textContent = translations[key];
+                    }
+                }
+            });
+            
+            // Aggiorna il titolo della pagina se presente
+            const pageTitle = document.querySelector('title[data-translate]');
+            if (pageTitle && translations['metaTitle']) {
+                document.title = translations['metaTitle'];
+            }
+            
         } catch (error) {
             console.error('Error loading translations:', error);
-            return {};
-        }
-    }
-    
-    // Aggiorna il contenuto della pagina con le traduzioni
-    function updatePageContent() {
-        elementsToTranslate.forEach(element => {
-            const key = element.getAttribute('data-translate');
-            if (translations[key]) {
-                if (element.tagName === 'INPUT' && (element.type === 'submit' || element.type === 'button')) {
-                    element.value = translations[key];
-                } else if (element.tagName === 'IMG' && element.alt) {
-                    element.alt = translations[key];
-                } else if (element.hasAttribute('title')) {
-                    element.title = translations[key];
-                } else if (element.hasAttribute('placeholder')) {
-                    element.placeholder = translations[key];
-                } else {
-                    element.textContent = translations[key];
-                }
-            }
-        });
-        
-        // Aggiorna il titolo della pagina
-        const pageTitle = document.querySelector('title[data-translate]');
-        if (pageTitle && translations['metaTitle']) {
-            document.title = translations['metaTitle'];
         }
     }
     
@@ -83,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
             canonicalLink.href = currentUrl.toString();
         }
         
+        // Aggiorna meta tag OpenGraph
         const ogTitle = document.querySelector('meta[property="og:title"]');
         const ogDescription = document.querySelector('meta[property="og:description"]');
         
@@ -96,18 +81,22 @@ document.addEventListener('DOMContentLoaded', function() {
     function setActiveLanguageButton() {
         const buttons = document.querySelectorAll('.language-switcher button');
         buttons.forEach(button => {
-            const buttonLang = button.getAttribute('data-lang') || button.textContent.toLowerCase();
-            const isActive = buttonLang === currentLang;
-            
-            button.classList.toggle('active', isActive);
-            button.style.backgroundColor = isActive ? 'var(--primary-color)' : '';
-            button.style.color = isActive ? 'white' : '';
+            if (button.textContent.toLowerCase() === currentLang) {
+                button.classList.add('active');
+                button.style.backgroundColor = 'var(--primary-color)';
+                button.style.color = 'white';
+            } else {
+                button.classList.remove('active');
+                button.style.backgroundColor = '';
+                button.style.color = '';
+            }
         });
     }
     
     // Aggiorna gli alt delle immagini
     function updateImageAlts() {
-        document.querySelectorAll('img[data-translate]').forEach(img => {
+        const images = document.querySelectorAll('img[data-translate]');
+        images.forEach(img => {
             const key = img.getAttribute('data-translate');
             if (translations[key]) {
                 img.alt = translations[key];
@@ -115,47 +104,57 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Inizializza tutto
-    async function init() {
-        await loadTranslations();
-        updatePageContent();
-        setActiveLanguageButton();
-        initLazyLoading();
-    }
-    
     // Lazy loading per le immagini
     function initLazyLoading() {
         const lazyImages = document.querySelectorAll('img[loading="lazy"]');
         
-        // Aggiungi questo blocco CRUCIALE dalla vecchia versione
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '100px'
+        });
+        
         lazyImages.forEach(img => {
-            if (!img.dataset.src) {
-                img.dataset.src = img.src; // Copia src in data-src
-                img.src = ''; // Opzionale: svuota src per forzare lazy loading
+            img.dataset.src = img.src;
+            img.src = '';
+            observer.observe(img);
+        });
+    }
+    
+    // Inizializza tutto
+    function init() {
+        loadTranslations();
+        setActiveLanguageButton();
+        initLazyLoading();
+        
+        // Gestione caricamento immagini lazy
+        document.addEventListener('DOMContentLoaded', () => {
+            const lazyImages = [].slice.call(document.querySelectorAll('img[loading="lazy"]'));
+            
+            if ('IntersectionObserver' in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.add('loaded');
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
             }
         });
-
-        if ('IntersectionObserver' in window) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src; // Usa data-src
-                        img.classList.add('loaded');
-                        observer.unobserve(img);
-                    }
-                });
-            }, { rootMargin: '100px' });
-
-            lazyImages.forEach(img => {
-                observer.observe(img);
-            });
-        } else {
-            // Fallback per browser senza Observer
-            lazyImages.forEach(img => {
-                img.src = img.dataset.src || img.src;
-            });
-        }
     }
     
     // Avvia l'inizializzazione
