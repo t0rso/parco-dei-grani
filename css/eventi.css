@@ -1,0 +1,126 @@
+/* Notice Board Background */
+.events-board {
+    min-height: 100vh;
+    background: repeating-linear-gradient(135deg, var(--light-color), var(--white-color) 40px, var(--light-color) 80px);
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.events-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.event-card {
+    background: #fffbe7;
+    box-shadow: 0 6px 24px rgba(120, 100, 60, 0.10), 0 1.5px 0 #e2c97b inset;
+    border-radius: 18px 18px 24px 18px;
+    width: 360px;
+    min-height: 260px;
+    padding: 1.5rem 1.2rem 2rem 1.2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    margin-bottom: 1.5rem;
+}
+
+.event-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 13px;
+    margin-bottom: 1.1rem;
+    box-shadow: 0 2px 8px rgba(120, 100, 60, 0.08);
+}
+
+.event-date {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.event-desc {
+    font-size: 1rem;
+    color: var(--dark-color);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Tilted effect for post-it style */
+.tilt-left {
+    transform: rotate(-4deg);
+}
+.tilt-right {
+    transform: rotate(3.5deg);
+}
+
+.event-card::before {
+    content: '';
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 38px;
+    height: 38px;
+    background: url('data:image/svg+xml;utf8,<svg width="38" height="38" xmlns="http://www.w3.org/2000/svg"><circle cx="19" cy="19" r="19" fill="%23e2c97b"/></svg>') no-repeat center center/cover;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(120, 100, 60, 0.10);
+}
+
+.event-card::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background: #b1a39c;
+    border-radius: 50%;
+    z-index: 3;
+    box-shadow: 0 1px 2px rgba(120, 100, 60, 0.15);
+}
+
+@media (max-width: 900px) {
+    .event-card {
+        width: 95vw;
+        max-width: 420px;
+        min-height: 200px;
+        padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    }
+    .events-cards {
+        gap: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .events-board {
+        padding-top: 90px;
+    }
+    .event-card {
+        width: 90vw;
+        max-width: 320px;
+        min-height: 120px;
+        padding: 0.8rem 0.2rem 1.2rem 0.2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .event-card img {
+        height: 120px;
+    }
+    .events-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+} 

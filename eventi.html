@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Parco dei Grani</title>
-    <meta name="description" content="Ristorante Parco dei Grani a Rimini. Cucina tradizionale con ingredienti locali.">
-    <meta property="og:title" content="Parco dei Grani | Ristorante di qualità a Rimini">
-    <meta property="og:description" content="Scopri la nostra cucina tradizionale con un tocco moderno nel cuore di Rimini">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.parcodeigrani.com">
-    <link rel="canonical" href="https://www.parcodeigrani.com">
+    <title>Eventi | Parco dei Grani</title>
+    <meta name="description" content="Eventi e novità al Parco dei Grani. Scopri cosa succede nel nostro ristorante e parco giochi a Rimini!">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/eventi.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header con Navbar -->
+    <!-- Header con Navbar (copia da index.html) -->
     <header class="header">
         <div class="container">
             <a href="index.html" class="logo" data-translate="siteTitle">Parco dei <span>Grani</span></a>
             <nav class="navbar">
                 <ul>
-                    <li><a href="index.html" class="active" data-translate="home">Home</a></li>
+                    <li><a href="index.html" data-translate="home">Home</a></li>
                     <li><a href="menu.html" data-translate="menu">Menu</a></li>
-                    <!-- <li><a href="eventi.html" data-translate="events">Eventi</a></li> -->
+                    <li><a href="eventi.html" class="active" data-translate="events">Eventi</a></li>
                     <li><a href="about.html" data-translate="about">Chi Siamo</a></li>
                     <li><a href="gallery.html" data-translate="gallery">Gallery</a></li>
                     <li><a href="contatti.html" data-translate="contact">Contatti</a></li>
@@ -40,91 +36,46 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <main class="events-board">
         <div class="container">
-            <div class="hero-content">
-                <img id = "logo" src="immagini/home/logo.png" alt="logo">
-                <h1 data-translate="heroTitle">Un'oasi di gusto nel cuore di Rimini.</h1>
-                <p data-translate="heroSubtitle">Il posto giusto dove rilassarsi mangiando qualcosa di buono</p>
-                <a href="menu.html" class="btn" data-translate="discoverMenu">Scopri il Menu</a>
-                <a href="tel:+39327340 8663" class="btn btn-outline" data-translate="bookTable">Chiamaci per prenotare un tavolo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section class="menu-preview" id="menu">
-        <div class="container">
-            <h2 class="section-title" data-translate="specialties">Le Nostre Specialità</h2>
-            
-            <div class="highlight-cards" id="highlightCards">
-                <!-- Le card verranno caricate qui automaticamente -->
-            </div>
-            
-            <div class="text-center">
-                <a href="menu.html" class="btn btn-primary" data-translate="fullMenu">Scopri il Menu Completo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Eventi Section -->
-    <section class="home-events-preview" id="eventi">
-        <div class="container">
-            <h2 class="section-title" data-translate="eventsTitle">Eventi & Novità</h2>
-            <div class="home-events-cards">
-                <div class="home-event-card tilt-left">
+            <h1 class="section-title" data-translate="eventsTitle">Eventi & Novità</h1>
+            <div class="events-cards">
+                <!-- Esempio di card evento -->
+                <div class="event-card tilt-left">
                     <img src="immagini/gallery/ristorante/img-12.jpeg" alt="Festa d'estate">
                     <div class="event-date">15 Giugno 2024</div>
                     <div class="event-desc">Festa d'estate: musica dal vivo, giochi per bambini e menù speciale!</div>
                 </div>
-                <div class="home-event-card tilt-right">
+                <div class="event-card tilt-right">
                     <img src="immagini/gallery/parco giochi/img-2.jpeg" alt="Laboratorio Pizza">
                     <div class="event-date">29 Giugno 2024</div>
                     <div class="event-desc">Laboratorio di pizza per bambini: impasta, condisci e gusta la tua creazione!</div>
                 </div>
-                <div class="home-event-card tilt-left">
+                <div class="event-card tilt-left">
                     <img src="immagini/gallery/ristorante/img-7.jpeg" alt="Serata Romagnola">
                     <div class="event-date">6 Luglio 2024</div>
                     <div class="event-desc">Serata Romagnola: piatti tipici, balli e tanto divertimento per tutta la famiglia.</div>
                 </div>
-            </div>
-            <div class="text-center" style="margin-top:2rem;">
-                <a href="eventi.html" class="btn btn-primary" data-translate="allEvents">Scopri tutti gli eventi</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Chi Siamo Section -->
-    <section class="about-section" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title" data-translate="aboutTitle">Chi Siamo</h2>
-                    <p data-translate="philosophyText1">Partiti dalle colline riminesi portando avanti la tradizione... la piadina romagnola!!!</p>
-                    <p data-translate="philosophyText2">Poi la scommessa nel centro di rimini dove oltre la piadina un menù più ricco.. hamburger, insalatone e fritto di pesce aggiungendo poi un parco giochi ed un grande parcheggio</p>
-                    <a href="about.html" class="btn btn-primary" data-translate="learnMore">Scopri di più</a>
-                </div>
-                <div class="about-image">
-                    <img src="immagini/home/about.jpeg" alt="Interno del ristorante Parco dei Grani" loading="lazy">
+                <div class="event-card tilt-right">
+                    <img src="immagini/gallery/parco giochi/img-1.jpeg" alt="Cinema all'aperto">
+                    <div class="event-date">13 Luglio 2024</div>
+                    <div class="event-desc">Cinema all'aperto nel parco: porta la tua coperta, popcorn offerti da noi!</div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
+    <!-- Footer (copia da index.html) -->
     <footer class="footer" id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
                     <h3 data-translate="footerTitle">Parco dei Grani</h3>
                     <p>Via Giovanni Lanza, 9, 47923 Rimini RN</p>
-                    <!-- <p>P.IVA: 12345678901</p> -->
                 </div>
                 <div class="footer-col">
                     <h3 data-translate="openingHours">Orari</h3>
                     <p data-translate="weekHours">Aperti tutti i giorni dalle 12:00 alle 00:00</p>
-                    <!-- <p data-translate="weekendHours">xxxx</p> -->
                 </div>
                 <div class="footer-col">
                     <h3 data-translate="contacts">Contatti</h3>
@@ -145,15 +96,10 @@
         </div>
     </footer>
 
-    <script src="data/menu-data.js"></script>
     <script src="js/script.js"></script>
     <script src="js/language-switcher.js"></script>
     <script>
-        // Anno corrente nel footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
-    <!-- Cloudflare Web Analytics -->
-     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a8ac18ced8794260b2091c4f8006fe8f"}'></script>
-    <!-- End Cloudflare Web Analytics -->
 </body>
-</html>
+</html> 
