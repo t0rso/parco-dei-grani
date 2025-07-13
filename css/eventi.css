@@ -1,7 +1,7 @@
 /* Notice Board Background */
 .events-board {
     min-height: 100vh;
-    background: repeating-linear-gradient(135deg, var(--light-color), var(--white-color) 40px, var(--light-color) 80px);
+    background-color: var(--white-color);
     padding-top: 120px;
     padding-bottom: 60px;
 }
