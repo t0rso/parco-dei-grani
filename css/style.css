@@ -1,4 +1,7 @@
 /* Reset e Stili Base */
+#eventi {
+    display: none;
+}
 * {
     margin: 0;
     padding: 0;
