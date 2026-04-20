@@ -12,7 +12,7 @@ const menuData = {
                     name_eng: "Piadina sausage and onion",
                     description_ita: "Salsiccia, cipolla, pomodoro, maionese",
                     description_eng: "Sausage, onion, tomato, mayonnaise",
-                    price: 7.2
+                    price: 8.00
                 },
                 {
                     id: "coppa-pomodoro",
@@ -20,7 +20,7 @@ const menuData = {
                     name_eng: "Piadina coppa and tomato",
                     description_ita: "Coppa, pomodoro gratinato, formaggio",
                     description_eng: "Coppa, gratin tomato, cheese",
-                    price: 7.0
+                    price: 7.50
                 },
                 {
                     id: "sardoncini-radicchio",
@@ -28,7 +28,7 @@ const menuData = {
                     name_eng: "Piadina sardines and radicchio",
                     description_ita: "Sardoncini fritti, radicchio verde, cipolla di Tropea",
                     description_eng: "Fried sardines, green radicchio, Tropea onion",
-                    price: 7.80
+                    price: 8.40
                 },
                 {
                     id: "porchetta",
@@ -36,7 +36,7 @@ const menuData = {
                     name_eng: "Piadina porchetta",
                     description_ita: "Porchetta, insalata (A seconda della disponibilità)",
                     description_eng: "Porchetta, salad (Subject to availability)",
-                    price: 7.80
+                    price: 8.00
                 },
                 {
                     id: "salsiccia-friarielli",
@@ -44,7 +44,7 @@ const menuData = {
                     name_eng: "Piadina sausage and friarielli",
                     description_ita: "Salsiccia, friarielli, formaggio Castel San Pietro",
                     description_eng: "Sausage, friarielli, Castel San Pietro cheese",
-                    price: 7.50
+                    price: 8.00
                 },
                 {
                     id: "pulled-pork",
@@ -52,7 +52,7 @@ const menuData = {
                     name_eng: "Piadina pulled pork",
                     description_ita: "Pulled pork, salsa Cesar piccante, scamorza, insalata, pomodoro",
                     description_eng: "Pulled pork, Caesar dressing, scamorza, lettuce, tomato",
-                    price: 8.3
+                    price: 8.60
                 },
                 {
                     id: "pulled-pork-friarielli",
@@ -60,7 +60,7 @@ const menuData = {
                     name_eng: "Piadina pulled pork and friarielli",
                     description_ita: "Pulled pork, friarielli, fontina, salsa Cesar",
                     description_eng: "Pulled pork, friarielli, fontina, Caesar dressing",
-                    price: 8.70
+                    price: 9.00
                 },
                 {
                     id: "salame-nduja",
@@ -71,12 +71,20 @@ const menuData = {
                     price: 8.00
                 },
                 {
+                    id: "salame-nostrano",
+                    name_ita: "Salame nostrano 'La delizia' taglio Milano",
+                    name_eng: "Traditional 'La Delizia' salami Milan-style cut",
+                    description_ita: "",
+                    description_eng: "",
+                    price: 8.00
+                },
+                {
                     id: "roastbeef-insalata",
                     name_ita: "Piada roastbeef e insalata",
                     name_eng: "Piadina roast beef and salad",
                     description_ita: "Roastbeef, insalata verde, maionese, pomodoro, pepe nero",
                     description_eng: "Roast beef, green salad, mayonnaise, tomato, black pepper",
-                    price: 8.80
+                    price: 9.20
                 },
                 {
                     id: "roastbeef-pomodoro",
@@ -84,7 +92,7 @@ const menuData = {
                     name_eng: "Piadina roast beef and tomato",
                     description_ita: "Roastbeef, pomodoro gratinato, formaggio fresco",
                     description_eng: "Roast beef, gratin tomato, fresh cheese",
-                    price: 9.30
+                    price: 9.50
                 },
                 {
                     id: "alici",
@@ -92,7 +100,7 @@ const menuData = {
                     name_eng: "Piadina marinated anchovies",
                     description_ita: "Alici marinate, radicchio, cipolla, scopatolo",
                     description_eng: "Marinated anchovies, radicchio, onion, scopatolo",
-                    price: 7.60
+                    price: 8.20
                 },
                 {
                     id: "bianchetti",
@@ -115,7 +123,7 @@ const menuData = {
                     name_eng: "Parma ham",
                     description_ita: "",
                     description_eng: "",
-                    price: 6.5
+                    price: 7.00
                 },
                 {
                     id: "crudo-formaggio",
@@ -123,7 +131,7 @@ const menuData = {
                     name_eng: "Parma ham and cheese",
                     description_ita: "",
                     description_eng: "",
-                    price: 7.0
+                    price: 7.40
                 },
                 {
                     id: "crudo-formaggio-rucola",
@@ -131,7 +139,7 @@ const menuData = {
                     name_eng: "Parma ham, cheese and rocket",
                     description_ita: "",
                     description_eng: "",
-                    price: 7.2
+                    price: 7.60
                 },
                 {
                     id: "speck-scamorza",
@@ -139,7 +147,7 @@ const menuData = {
                     name_eng: "Speck and scamorza cheese",
                     description_ita: "",
                     description_eng: "",
-                    price: 6.3
+                    price: 6.80
                 },
                 {
                     id: "salame-piccante-scamorza",
@@ -147,7 +155,7 @@ const menuData = {
                     name_eng: "Spicy salami and scamorza cheese",
                     description_ita: "",
                     description_eng: "",
-                    price: 6.3
+                    price: 6.80
                 },
                 {
                     id: "salsiccia",
@@ -155,7 +163,7 @@ const menuData = {
                     name_eng: "Sausage",
                     description_ita: "",
                     description_eng: "",
-                    price: 5.8
+                    price: 6.00
                 },
                 {
                     id: "salsiccia-cipolla",
@@ -163,7 +171,7 @@ const menuData = {
                     name_eng: "Sausage and onion",
                     description_ita: "",
                     description_eng: "",
-                    price: 6.6
+                    price: 7.00
                 },
                 {
                     id: "salsiccia-formaggio-rucola",
@@ -171,7 +179,7 @@ const menuData = {
                     name_eng: "Sausage, cheese and rocket",
                     description_ita: "",
                     description_eng: "",
-                    price: 6.8
+                    price: 7.40
                 },
                 {
                     id: "salame",
@@ -179,7 +187,7 @@ const menuData = {
                     name_eng: "Salami",
                     description_ita: "",
                     description_eng: "",
-                    price: 5.2
+                    price: 5.50
                 },
                 {
                     id: "bresaola",
@@ -187,7 +195,7 @@ const menuData = {
                     name_eng: "Bresaola",
                     description_ita: "",
                     description_eng: "",
-                    price: 7.0
+                    price: 8.00
                 },
                 {
                     id: "bresaola-formaggio-rucola",
@@ -195,7 +203,7 @@ const menuData = {
                     name_eng: "Bresaola, cheese and rocket",
                     description_ita: "",
                     description_eng: "",
-                    price: 7.6
+                    price: 8.60
                 },
                 {
                     id: "cotto",
@@ -203,7 +211,7 @@ const menuData = {
                     name_eng: "Cooked ham",
                     description_ita: "",
                     description_eng: "",
-                    price: 4.8
+                    price: 5.00
                 },
                 {
                     id: "cotto-formaggio",
@@ -211,7 +219,7 @@ const menuData = {
                     name_eng: "Cooked ham and cheese",
                     description_ita: "",
                     description_eng: "",
-                    price: 5.3
+                    price: 5.00
                 },
                 {
                     id: "mortadella",
@@ -219,7 +227,7 @@ const menuData = {
                     name_eng: "Mortadella",
                     description_ita: "",
                     description_eng: "",
-                    price: 4.0
+                    price: 4.50
                 },
                 {
                     id: "formaggio-rucola",
@@ -227,7 +235,7 @@ const menuData = {
                     name_eng: "Cheese and rocket",
                     description_ita: "",
                     description_eng: "",
-                    price: 4.4
+                    price: 4.60
                 },
                 {
                     id: "insalata-tonno",
@@ -235,7 +243,7 @@ const menuData = {
                     name_eng: "Salad, tuna, parmesan and fresh tomato",
                     description_ita: "",
                     description_eng: "",
-                    price: 8.2
+                    price: 9.50
                 },
                 {
                     id: "finocchiona",
@@ -243,7 +251,7 @@ const menuData = {
                     name_eng: "Finocchiona salami, fresh cheese and rocket",
                     description_ita: "",
                     description_eng: "",
-                    price: 6.8
+                    price: 7.00
                 },
                 {
                     id: "radicchio",
@@ -251,7 +259,7 @@ const menuData = {
                     name_eng: "Radicchio, raw onion and fresh tomato",
                     description_ita: "",
                     description_eng: "",
-                    price: 5.0
+                    price: 5.00
                 },
                 {
                     id: "tacchino",
@@ -259,7 +267,7 @@ const menuData = {
                     name_eng: "Turkey breast, rocket and fresh tomato",
                     description_ita: "",
                     description_eng: "",
-                    price: 6.5
+                    price: 6.80
                 }
             ]
         },
@@ -274,7 +282,7 @@ const menuData = {
                     name_eng: "Cassone mozzarella and tomato",
                     description_ita: "Mozzarella, pomodoro",
                     description_eng: "Mozzarella, tomato",
-                    price: 5.0
+                    price: 5.50
                 },
                 {
                     id: "cassone-erbe",
@@ -282,7 +290,7 @@ const menuData = {
                     name_eng: "Cassone with herbs", 
                     description_ita: "Erbe miste",
                     description_eng: "Mixed herbs",
-                    price: 5.00
+                    price: 5.50
                 },
                 {
                     id: "cassone-erbe-pecorino",
@@ -290,7 +298,7 @@ const menuData = {
                     name_eng: "Cassone herbs and pecorino",
                     description_ita: "Erbe miste, pecorino",
                     description_eng: "Mixed herbs, pecorino cheese",
-                    price: 5.50
+                    price: 6.00
                 },
                 {
                     id: "cassone-erbe-salsiccia",
@@ -298,7 +306,7 @@ const menuData = {
                     name_eng: "Cassone herbs and sausage", 
                     description_ita: "Erbe miste, salsiccia",
                     description_eng: "Mixed herbs, sausage",
-                    price: 5.50
+                    price: 6.00
                 },
                 {
                     id: "cassone-mozzarella-salsiccia",
@@ -306,7 +314,7 @@ const menuData = {
                     name_eng: "Cassone mozzarella and sausage",
                     description_ita: "Mozzarella, salsiccia",
                     description_eng: "Mozzarella, sausage",
-                    price: 5.50
+                    price: 6.00
                 },
                 {
                     id: "cassone-salsiccia-patate",
@@ -314,7 +322,7 @@ const menuData = {
                     name_eng: "Cassone sausage and potatoes",
                     description_ita: "Salsiccia, patate",
                     description_eng: "Sausage, potatoes",
-                    price: 5.00
+                    price: 5.50
                 },
                 {
                     id: "cassone-mozzarella-salame",
@@ -322,7 +330,7 @@ const menuData = {
                     name_eng: "Cassone mozzarella and salami",
                     description_ita: "Mozzarella, salame piccante, olive nere",
                     description_eng: "Mozzarella, spicy salami, black olives",
-                    price: 5.50
+                    price: 6.00
                 },
                 {
                     id: "cassone-mozzarella-speck",
@@ -330,7 +338,7 @@ const menuData = {
                     name_eng: "Cassone mozzarella and speck", 
                     description_ita: "Mozzarella, speck, gorgonzola",
                     description_eng: "Mozzarella, speck, gorgonzola",
-                    price: 5.50
+                    price: 6.00
                 }
             ]
         },
@@ -347,7 +355,7 @@ const menuData = {
                     name_eng: "Classic Burger",
                     description_ita: "Pane classico con sesamo, hamburger di chianina, pomodori a fette, lattuga, cipolla stufata, maionese e ketchup + patatine dipper",
                     description_eng: "Classic sesame bun, Chianina beef patty, sliced tomatoes, lettuce, stewed onions, mayonnaise and ketchup + dipper fries",
-                    price: 13
+                    price: 14.00
                 },
                 {
                     id: "cheeseburger",
@@ -355,7 +363,7 @@ const menuData = {
                     name_eng: "Cheeseburger",
                     description_ita: "Pane classico con sesamo, hamburger di chianina, cheddar, pomodori a fette, lattuga, cipolla stufata, maionese e ketchup + patatine dipper",
                     description_eng: "Classic sesame bun, Chianina beef patty, cheddar cheese, sliced tomatoes, lettuce, stewed onions, mayonnaise and ketchup + dipper fries",
-                    price: 13.5
+                    price: 15.00
                 },
                 {
                     id: "cheesebacon",
@@ -363,7 +371,7 @@ const menuData = {
                     name_eng: "Bacon Cheeseburger",
                     description_ita: "Pane classico con sesamo, hamburger di chianina, cheddar, bacon, pomodori a fette, lattuga, cipolla stufata, maionese e ketchup + patatine dipper",
                     description_eng: "Classic sesame bun, Chianina beef patty, cheddar cheese, bacon, sliced tomatoes, lettuce, stewed onions, mayonnaise and ketchup + dipper fries",
-                    price: 14
+                    price: 15.50
                 },
                 {
                     id: "crispy",
@@ -371,7 +379,7 @@ const menuData = {
                     name_eng: "Crispy Burger",
                     description_ita: "Pane classico con sesamo, hamburger di chianina, bacon, crema di funghi, doppio cheddar + patatine dipper",
                     description_eng: "Classic sesame bun, Chianina beef patty, bacon, mushroom cream, double cheddar + dipper fries",
-                    price: 14
+                    price: 15.00
                 },
                 {
                     id: "papen",
@@ -379,7 +387,7 @@ const menuData = {
                     name_eng: "The Papen Burger... only for real Lovi",
                     description_ita: "Pane classico con sesamo con la nostra salsiccia alla griglia, bacon, cheddar, cipolla stufata + patatine dipper",
                     description_eng: "Classic sesame bun with our grilled sausage, bacon, cheddar, stewed onions + dipper fries",
-                    price: 13
+                    price: 14.00
                 },
                 {
                     id: "veggy",
@@ -387,7 +395,15 @@ const menuData = {
                     name_eng: "Veggie Burger",
                     description_ita: "Pane classico con sesamo con melanzana gratinata, maionese vegana al lime, pomodori a fette e tapenade di olive verdi + patatine dipper",
                     description_eng: "Classic sesame bun with grilled eggplant, vegan lime mayonnaise, sliced tomatoes and green olive tapenade + dipper fries",
-                    price: 12.5
+                    price: 13.5
+                },
+                {
+                    id: "IL-Vegetariano",
+                    name_ita: "Il Vegetariano",
+                    name_eng: "The Vegetarian",
+                    description_ita: "Pane di farina di patate con cotoletta vegana, lattuga, pomodoro, maionese vegana al lime + patatine dipper",
+                    description_eng: "Potato flour bun with vegan cutlet, lettuce, tomato, lime vegan mayonnaise + dipper fries",
+                    price: 14.00
                 }
             ]
         },
@@ -404,7 +420,7 @@ const menuData = {
                     name_eng: "Kids Burger",
                     description_ita: "Pane classico con sesamo e carne di prima scelta 100% italiana + patatine stick (Opzioni: +Cheddar/Bacon +1,0€)",
                     description_eng: "Classic sesame bun with premium 100% Italian beef + fries sticks (Options: +Cheddar/Bacon +1,0€)",
-                    price: 8.5
+                    price: 9.00
                 },
                 {
                     id: "baby-cotoletta",
@@ -412,7 +428,7 @@ const menuData = {
                     name_eng: "Kids Chicken Cutlet",
                     description_ita: "Pane classico con sesamo e cotoletta di pollo + patatine stick (Opzioni: +Cheddar/Bacon +1,0€)",
                     description_eng: "Classic sesame bun with chicken cutlet + fries sticks (Options: +Cheddar/Bacon +1,0€)",
-                    price: 8.5
+                    price: 9.00
                 }
             ]
         },
@@ -427,7 +443,7 @@ const menuData = {
                     name_eng: "Mixed salad",
                     description_ita: "Lattuga, pomodori, rucola e carote alla julienne",
                     description_eng: "Lettuce, tomatoes, rocket and julienne carrots",
-                    price: 5.5
+                    price: 5.80
                 },
                 {
                     id: "riminese",
@@ -435,7 +451,7 @@ const menuData = {
                     name_eng: "La riminese",
                     description_ita: "Radicchio, cipolla, aceto rosso e Scoparolo",
                     description_eng: "Radicchio, onion, red vinegar and Scoparolo",
-                    price: 6.5
+                    price: 6.80
                 },
                 {
                     id: "adriatico-mare-nostrum",
@@ -443,7 +459,7 @@ const menuData = {
                     name_eng: "Adriatico Mare Nostrum",
                     description_ita: "Misticanza, cipolla di tropea, parmigiano a scaglie e riduzione di sangiovese. Accompagnata con sardoncini fritti",
                     description_eng: "Mixed greens, Tropea onion, parmesan flakes and sangiovese reduction. Served with fried small sardines",
-                    price: 12.0
+                    price: 12.00
                 },
                 {
                     id: "oltremare",
@@ -451,7 +467,7 @@ const menuData = {
                     name_eng: "Overseas",
                     description_ita: "Lattuga, Filetti di Acciughe marinate, avocado, caprino olive taggiasche denocciolate, pomodori secchi",
                     description_eng: "Lettuce, marinated anchovy fillets, avocado, pitted taggiasche olives, sun-dried tomatoes",
-                    price: 12.0
+                    price: 12.00
                 },
                 {
                     id: "caesar-parco-dei-grani",
@@ -459,7 +475,7 @@ const menuData = {
                     name_eng: "The Parco dei Grani Caesar",
                     description_ita: "Caesar dressing, crostini alla paprica, bacon crispy, petto di pollo marinato, insalata, erba cipollina e germogli",
                     description_eng: "Caesar dressing, paprika croutons, crispy bacon, marinated chicken breast, salad, chives and sprouts",
-                    price: 12.0
+                    price: 12.00
                 }
             ]
         },
@@ -474,15 +490,23 @@ const menuData = {
                     name_eng: "Spicy Jalapeño peppers stuffed with cheese",
                     description_ita: "",
                     description_eng: "",
-                    price: 5.5
+                    price: 5.50
                 },
                 {
                     id: "crocchette-pollo",
-                    name_ita: "Crocchette di pollo",
-                    name_eng: "Chicken croquettes",
+                    name_ita: "Bocconcini di pollo",
+                    name_eng: "Chicken nuggets",
                     description_ita: "",
                     description_eng: "",
-                    price: 5.5
+                    price: 5.50
+                },
+                {
+                    id: "bocconcini-pulled",
+                    name_ita: "Bocconcini di pulled fritti",
+                    name_eng: "Crispy pulled bites",
+                    description_ita: "",
+                    description_eng: "",
+                    price: 7.50
                 },
                 {
                     id: "patatine-stick",
@@ -490,7 +514,7 @@ const menuData = {
                     name_eng: "French fries sticks portion",
                     description_ita: "",
                     description_eng: "",
-                    price: 4
+                    price: 4.50
                 },
                 {
                     id: "patatine-dipper",
@@ -498,7 +522,7 @@ const menuData = {
                     name_eng: "French fries dipper portion",
                     description_ita: "",
                     description_eng: "",
-                    price: 4.5
+                    price: 5.00
                 },
                 {
                     id: "gratinato",
@@ -506,7 +530,7 @@ const menuData = {
                     name_eng: "Gratin dish",
                     description_ita: "",
                     description_eng: "",
-                    price: 2.5
+                    price: 2.50
                 },
                 {
                     id: "salsiccia",
@@ -514,7 +538,7 @@ const menuData = {
                     name_eng: "One sausage",
                     description_ita: "",
                     description_eng: "",
-                    price: 1.9
+                    price: 1.90
                 },
                 {
                     id: "cipolla-cotta-small",
@@ -522,7 +546,7 @@ const menuData = {
                     name_eng: "Cooked onion small",
                     description_ita: "",
                     description_eng: "",
-                    price: 2.8
+                    price: 2.80
                 },
                 {
                     id: "cipolla-cotta-large",
@@ -530,7 +554,7 @@ const menuData = {
                     name_eng: "Cooked onion large",
                     description_ita: "",
                     description_eng: "",
-                    price: 3.8
+                    price: 3.80
                 },
                 {
                     id: "salse",
@@ -538,7 +562,7 @@ const menuData = {
                     name_eng: "Sauce sachets",
                     description_ita: "",
                     description_eng: "",
-                    price: 0.2
+                    price: 0.20
                 }
             ]
         },
@@ -553,7 +577,7 @@ const menuData = {
                     name_eng: "Tradition without frills",
                     description_ita: "I nostri salumi di qualità, pecorini da taglio, rucola",
                     description_eng: "Our quality cured meats, pecorino cheeses, rocket",
-                    price: 13.5
+                    price: 14.00
                 },
                 {
                     id: "tagliere-formaggi",
@@ -561,7 +585,7 @@ const menuData = {
                     name_eng: "Mixed cheese board",
                     description_ita: "La nostra selezione di formaggi accompagnati da miele e marmellata",
                     description_eng: "Our selection of cheeses served with honey and jam",
-                    price: 14.5
+                    price: 14.50
                 }
             ]
         },
@@ -576,7 +600,7 @@ const menuData = {
                     name_eng: "Fried calamari with marinara sauce",
                     description_ita: "",
                     description_eng: "",
-                    price: 11.5
+                    price: 12.00
                 },
                 {
                     id: "calamari-pecorino",
@@ -584,7 +608,7 @@ const menuData = {
                     name_eng: "Tasty fried calamari with pecorino scoparolo, rocket, Sangiovese reduction",
                     description_ita: "",
                     description_eng: "",
-                    price: 13.0,
+                    price: 13.50,
                 },
                 {
                     id: "fritto-misto",
@@ -592,7 +616,7 @@ const menuData = {
                     name_eng: "Mixed fried seafood",
                     description_ita: "",
                     description_eng: "",
-                    price: 13.0
+                    price: 13.00
                 }
             ]
         },
@@ -607,7 +631,7 @@ const menuData = {
                     name_eng: "Traditional mascarpone cream",
                     description_ita: "",
                     description_eng: "",
-                    price: 6.0
+                    price: 6.00
                 },
                 {
                     id: "crema-bruciata",
@@ -615,7 +639,7 @@ const menuData = {
                     name_eng: "Burnt cream",
                     description_ita: "",
                     description_eng: "",
-                    price: 6.0
+                    price: 6.00
                 },
                 {
                     id: "piada-nutella",
@@ -623,7 +647,7 @@ const menuData = {
                     name_eng: "Flatbread with Nutella",
                     description_ita: "",
                     description_eng: "",
-                    price: 3.5
+                    price: 4.00
                 },
                 {
                     id: "piada-miele",
@@ -631,7 +655,7 @@ const menuData = {
                     name_eng: "Flatbread with honey, walnuts and pecorino",
                     description_ita: "",
                     description_eng: "",
-                    price: 6.0
+                    price: 6.00
                 },
                 {
                     id: "sorbetto",
@@ -639,7 +663,7 @@ const menuData = {
                     name_eng: "Sorbet",
                     description_ita: "",
                     description_eng: "",
-                    price: 3.5
+                    price: 3.50
                 }
             ]
         }
